@@ -1,0 +1,51 @@
+/*////////////////////////
+    Table of Contents
+
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+        3.2 Other
+    4. Components
+        4.1 Button
+        4.2 Input
+        4.3 Icon
+////////////////////////*/
+
+/*////////////////////////
+    1. Global Styles
+////////////////////////*/
+
+* {
+    box-sizing: border-box;
+}
+
+
+:root {
+    --primary-color: #228b22;
+    --secondary-color: #60594d;
+}
+
+/*////////////////////////
+    2. Typography
+////////////////////////*/
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: Roboto, sans-serif;
+}
+
+h1 {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+p {
+    font-family: Poppins, sans-serif;
+}
+#verkoopId {
+    color: chartreuse;
+}

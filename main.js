@@ -161,3 +161,55 @@ const inventory = [
     sold: 8,
   },
 ];
+
+// Opdracht 1a: Gebruik een array-methode om een array te maken met alle tv-type namen. Log de uitkomst in de console.
+// Definieer een constante voor de nieuwe tabel.
+// Gebruik de Map methode om een nieuwe array te genereren vanuit de array 'inventory'.
+// Definieer een parameter naam om het resultaat door te geven, en zet deze tussen de ronde haakjes.
+// Return de tv-type naam in de call-back functie.
+// Log de inhoud van de nieuwe array in de console.
+// Verwachte uitkomst totaal 8 types: { type: '43PUS6504/12', type'....' }
+
+const tvTypes = inventory.map ((stockItem) => {
+return stockItem.type;
+})
+
+console.log(tvTypes);
+
+// Opdracht 1b: Gebruik een array-methode om alle tv's te verzamelen (de hele objecten) die volledig uitverkocht zijn. Log de uitkomst in de console.
+// Definieer een constante voor de nieuwe tabel.
+// Gebruik de filter methode om een nieuwe array te genereren vanuit de array 'inventory'.
+// Definieer een parameter naam om het resultaat door te geven, en zet deze tussen de ronde haakjes.
+// Return afhankelijk van conditie sold >= originalStock ('volledig uitverkocht') in de call-back functie.
+// Log de inhoud van de nieuwe array in de console.
+// Verwachte uitkomst totaal 2 types: { type: '...', type'....' }
+
+const uitverkochteItems = inventory.filter ((stockItem) => {
+  return (stockItem.sold >= stockItem.originalStock);
+})
+
+console.log(uitverkochteItems);
+
+// Opdracht 1c: Gebruik een array-methode om alle tv's te verzamelen (de hele objecten) die over AmbiLight beschikken. Log de uitkomst in de console.
+// Definieer een constante voor de nieuwe tabel.
+// Gebruik de filter methode om een nieuwe array te genereren vanuit de array 'inventory'.
+// Kies een parameter naam om het resultaat door te geven, en zet deze tussen de ronde haakjes.
+// Return afhankelijk van conditie option ambilight is true ('beschikking over AmbiLight') in de call-back functie.
+// Log de inhoud van de nieuwe array in de console.
+// Verwachte uitkomst totaal 2 types: { type: '...', type'....' }
+const stockitemsAmbilight = inventory.filter ((stockItem) => {
+  return (stockItem.options.ambiLight);
+})
+
+console.log(stockitemsAmbilight);
+
+// Opdracht 1d: Schrijf een functie die alle tv's van laagste naar hoogste prijs sorteert. Log de uitkomst in de console.
+// gebruik de sort methode om de array inventors te sorteren van laag naar hoog, dus a - b en zet dit tussen de ronde haken
+// vergelijk de property price
+// log de inhoud van de array in de console.
+
+inventory.sort((a,b) => a.price - b.price);
+
+console.log(inventory);
+
+
