@@ -1,33 +1,9 @@
-/*////////////////////////
-    Table of Contents
-
-    1. Global Styles
-    2. Typography
-    3. Layout
-        3.1 Reusables
-        3.2 Other
-    4. Components
-        4.1 Button
-        4.2 Input
-        4.3 Icon
-////////////////////////*/
-
-/*////////////////////////
-    1. Global Styles
-////////////////////////*/
-
 * {
     box-sizing: border-box;
 }
 
-
-:root {
-    --primary-color: #228b22;
-    --secondary-color: #60594d;
-}
-
 /*////////////////////////
-    2. Typography
+2. Typography
 ////////////////////////*/
 
 h1,
@@ -46,6 +22,10 @@ h1 {
 p {
     font-family: Poppins, sans-serif;
 }
-#verkoopId {
-    color: chartreuse;
+
+/*Opdracht 2b: Zorg ervoor dat dit aantal in het groen wordt weergegeven op de pagina.*/
+#totaal-sold {
+    background-color: gold;
+    color: green;
+    font-weight: bold;
 }

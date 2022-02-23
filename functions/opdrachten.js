@@ -17,18 +17,16 @@ console.log(totaalVerkocht);
 
 // Opdracht 2b: Zorg ervoor dat dit aantal in het groen wordt weergegeven op de pagina.
 // Definieer de kleur in CSS pagina.
-// maak een model van de html pagina (dom tree).
-// bepaal bij wel bestaand html element je een aanpassing wil maken
-// zet een ID-attribuut bij dit html element. Zo maak je hier een referentie naar zodat je javascript toegang geeft om dat deel aan te passen.
-// bepaal waar de dynamische waarde komt te staan en zet een naam tussen blokhaken
-// definieer een constante voor deze node in javascript met dezelfde naam
-// spreek hiervoor de getElement methode van het document object aan met parameter = ID-attribuut
-// wijzig vervolgens de textContent property van deze constante
-console.log('werkt het');
-const docAantal = document.getElementById('verkoopId');
+// bepaal bij welk bestaand html element je een aanpassing wil maken
+// zet een ID-attribuut bij dit html element.
+// bepaal waar de dynamische waarde komt te staan en zet een naam tussen blokhaken in de HTML
+// definieer constante voor deze node in javascript en spreek de getElement methode van het document object aan met parameter = ID-attribuut
+const getdocAantal = document.getElementById("totaal-sold");
+console.log(getdocAantal);
 console.log(totaalVerkocht);
-docAantal.textContent = totaalVerkocht;
-
+// wijzig vervolgens de textContent property van deze constante om het ook in de html document te zetten
+getdocAantal.textContent = totaalVerkocht;
+//
 //     Opdracht 2c: Hoeveel tv's heeft Tech It Easy ingekocht? Schrijf een script dat dit berekent. Log de uitkomst in de console.
 
 // Opdracht 2d: Zorg ervoor dat dit aantal in het blauw wordt weergegeven op de pagina.
