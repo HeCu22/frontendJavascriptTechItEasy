@@ -210,6 +210,6 @@ console.log(stockitemsAmbilight);
 
 inventory.sort((a,b) => a.price - b.price);
 
-console.log(inventory);
+console.log('Sort', inventory);
 
 

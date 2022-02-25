@@ -10,11 +10,11 @@ console.log('Opdracht4');
 // defineer lege string naamTV
 // definieer functie voegSamen en gebruik string methode concat();
 let naamTV = "";
-const voegSamen = (tvobject) => {
+const getTVnaamSamengev = (tvobject) => {
     return naamTV.concat(tvobject.brand, " ", tvobject.type, " ", tvobject.name);
 };
 
-console.log("Naam TV:", voegSamen(inventory[1]));
+console.log("Naam TV:", getTVnaamSamengev(inventory[0]));
 
 
 // Opdracht 4b:
@@ -23,10 +23,10 @@ console.log("Naam TV:", voegSamen(inventory[1]));
 // Test of jouw functie ook werkt wanneer er een andere tv-prijs wordt meegegeven.
 
 let prijsTV = "";
-const formPrice = (tvobject) => {
+const getFormPrice = (tvobject) => {
     return prijsTV.concat("€", Math.floor(tvobject.price), ",", tvobject.price % 10);
 };
-console.log('Price:', formPrice(inventory[0]));
+console.log('Price:', getFormPrice(inventory[0]));
 
 // Opdracht 4c:
 // Zorg ervoor dat er een string wordt gegenereerd voor alle beschikbare schermgroottes van één tv, in zowel inches als cm.
@@ -56,7 +56,7 @@ const getScreenSizesTV = (availSizes) => {
 
 };
 
-console.log(getScreenSizesTV(inventory[3].availableSizes));
+console.log(getScreenSizesTV(inventory[0].availableSizes));
 
 // document.getElementById("outputInches").innerHTML=valNum*0.39370;
 
@@ -79,8 +79,8 @@ console.log(getScreenSizesTV(inventory[3].availableSizes));
 const getTVnaam = document.getElementById("tv-naam");
 const getTVprijs = document.getElementById("tv-prijs");
 const getTVsizes = document.getElementById('tv-sizes');
-getTVnaam.textContent = voegSamen(inventory[3]);
-getTVprijs.textContent = formPrice(inventory[3]);
+getTVnaam.textContent = getTVnaamSamengev(inventory[3]);
+getTVprijs.textContent = getFormPrice(inventory[3]);
 getTVsizes.textContent = getScreenSizesTV(inventory[3].availableSizes);
 
 // Opdracht 4e:
@@ -95,7 +95,10 @@ getTVsizes.textContent = getScreenSizesTV(inventory[3].availableSizes);
 // Format in een functie plaatsen
 const tvDetailsFormat = (currentItem) => {
     console.log('cur', currentItem);
-    getTVnaam.textContent = voegSamen(currentItem);
+    getTVnaam.textContent = getTVnaamSamengev(currentItem);
+    getTVprijs.textContent = getFormPrice(currentItem);
+    getTVsizes.textContent = getScreenSizesTV(currentItem.availableSizes);
+
     return `
         <ul class="tv-details">
             <li>${getTVnaam.textContent}</li>
@@ -111,9 +114,7 @@ console.log('dit is referentie', getAllTVdetails);
 // Loopen door de array van frontend studenten en elke student in de functie plaatsen en het geheel afdrukken
 
 for (let i = 0; i < inventory.length; i++) {
-    // getTVnaam.textContent = voegSamen(inventory[i]);
-    // getTVprijs.textContent = formPrice(inventory[i]);
-    // getTVsizes.textContent = getScreenSizesTV(inventory[i].availableSizes);
+
     console.log('last',i, tvDetailsFormat(inventory[i]));
    getAllTVdetails.innerHTML += `${tvDetailsFormat(inventory[i])}`
 }

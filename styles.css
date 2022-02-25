@@ -2,6 +2,18 @@
     box-sizing: border-box;
 }
 
+
+:root {
+    --inkopen: blue;
+    --standard-tekst-color: #0c0c0c;
+    --verkopen: green;
+    --nogteverkopen: red;
+    --background: burlywood;
+    --button-color: peachpuff;
+    --body-color: peachpuff;
+}
+
+
 /*////////////////////////
 2. Typography
 ////////////////////////*/
@@ -37,7 +49,27 @@ ul {
     margin: 5px;
 }
 
+#all-details {
+    color: antiquewhite;
+    font-weight: bolder;
+}
+
+/* ====== 4.1 Button ====== */
+
+button {
+    min-width: 180px;
+    height: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+
+
 /* ----------------- Layout -------------------- */
+.column {
+    display: flex;
+    flex-direction: column;
+}
 .row {
     display: flex;
     flex-direction: row;
@@ -45,11 +77,22 @@ ul {
 
 .tv-details {
     margin-left: 0;
-    margin-bottom: 25px;
+    /*margin-bottom: 25px;*/
     display: block;
     font-size: small;
-    background-color: peachpuff;
+    background-color: var(--body-color);
 }
+
+.btn {
+    background-color: var(--button-color);
+    color: var(--standard-tekst-color);
+    margin: 20px;
+    border-radius: 30px;
+    border-color: var(--inkopen);
+    box-shadow: 5px 5px var(--body-color);
+}
+
+
 
 /*Opdracht 2b: Zorg ervoor dat dit aantal in het groen wordt weergegeven op de pagina.*/
 #tot-sold {
@@ -68,6 +111,6 @@ ul {
 
 #tv-naam, #tv-prijs, #tv-sizes {
     font-size: medium;
-    background-color: burlywood;
+    background-color: var(--background);
 ;
 }

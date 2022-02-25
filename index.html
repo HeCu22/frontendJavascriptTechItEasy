@@ -7,7 +7,8 @@
 </head>
 <body>
 <h1>Tech It Easy Dashboard</h1>
-<div>
+<div class="column">
+    <div class="column">
     <p>
         Bekijk hier de waarde van totaal aantal tv's verkocht:
         <span id="tot-sold">[doc-aantal]</span></p>
@@ -19,15 +20,27 @@
         Bekijk hier de waarde van totaal aantal tv's nog te verkopen:
         <span id="tot-te-verkopen">[doc-aantal]</span>
     </p>
+    </div>
+    <div class="row">
+        <button type="button" class="btn">
+            <a href="#sort">Sorteer op prijs</a>
+        </button>
+        <button type="button" class="btn">
+            <a href="#filter">Ambilight TV's</a>
+        </button>
+        <button type="button" class="btn">
+            <a href="#uitverk">Uitverkochte exemplaren</a>
+        </button>
+    </div>
 </div>
 <div>
-    <ul class="tv-details">
+    <ul class="tv-details"> TOPMODEL
         <li id="tv-naam">[doc-naam]</li>
         <li id="tv-prijs">[doc-prijs]</li>
         <li id="tv-sizes">[doc-sizes]</li>
     </ul>
 </div>
-<div id="all-details"></div>
+<div id="all-details">ALL MODELS</div>
 <div id="all-tv-details"></div>
 
 <script src="./data/main.js"></script>
