@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+}
+
+
+:root {
+    --inkopen: blue;
+    --standard-tekst-color: #0c0c0c;
+    --verkopen: green;
+    --nogteverkopen: red;
+    --background: burlywood;
+    --button-color: peachpuff;
+    --body-color: peachpuff;
+}
+
+
+/*////////////////////////
+2. Typography
+////////////////////////*/
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: Roboto, sans-serif;
+}
+
+h1 {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+body {
+    background-color: burlywood;
+}
+p {
+    font-family: Poppins, sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+ul {
+    padding: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 5px;
+}
+
+#all-details {
+    color: antiquewhite;
+    font-weight: bolder;
+}
+
+/* ====== 4.1 Button ====== */
+
+button {
+    min-width: 180px;
+    height: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+
+
+/* ----------------- Layout -------------------- */
+.column {
+    display: flex;
+    flex-direction: column;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.tv-details {
+    margin-left: 0;
+    /*margin-bottom: 25px;*/
+    display: block;
+    font-size: small;
+    background-color: var(--body-color);
+}
+
+.btn {
+    background-color: var(--button-color);
+    color: var(--standard-tekst-color);
+    margin: 20px;
+    border-radius: 30px;
+    border-color: var(--inkopen);
+    box-shadow: 5px 5px var(--body-color);
+}
+
+
+
+/*Opdracht 2b: Zorg ervoor dat dit aantal in het groen wordt weergegeven op de pagina.*/
+#tot-sold {
+    /*background-color: gold;*/
+    color: green;
+    font-weight: bolder;
+}
+#tot-inkoop {
+    color: blue;
+    font-weight: bold;
+}
+#tot-te-verkopen {
+    color: red;
+    font-weight: bold;
+}
+
+#tv-naam, #tv-prijs, #tv-sizes {
+    font-size: medium;
+    background-color: var(--background);
+;
+}

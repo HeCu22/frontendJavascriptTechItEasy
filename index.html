@@ -2,9 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
     <title>Tech It Easy Dashboard</title>
 </head>
 <body>
+<h1>Tech It Easy Dashboard</h1>
+<div class="column">
+    <div class="column">
+    <p>
+        Bekijk hier de waarde van totaal aantal tv's verkocht:
+        <span id="tot-sold">[doc-aantal]</span></p>
+    <p>
+        Bekijk hier de waarde van totaal aantal tv's ingekocht:
+        <span id="tot-inkoop">[doc-aantal]</span>
+    </p>
+    <p>
+        Bekijk hier de waarde van totaal aantal tv's nog te verkopen:
+        <span id="tot-te-verkopen">[doc-aantal]</span>
+    </p>
+    </div>
+    <div class="row">
+        <button type="button" class="btn">
+            <a href="#sort">Sorteer op prijs</a>
+        </button>
+        <button type="button" class="btn">
+            <a href="#filter">Ambilight TV's</a>
+        </button>
+        <button type="button" class="btn">
+            <a href="#uitverk">Uitverkochte exemplaren</a>
+        </button>
+    </div>
+</div>
+<div>
+    <ul class="tv-details"> TOPMODEL
+        <li id="tv-naam">[doc-naam]</li>
+        <li id="tv-prijs">[doc-prijs]</li>
+        <li id="tv-sizes">[doc-sizes]</li>
+    </ul>
+</div>
+<div id="all-details">ALL MODELS</div>
+<div id="all-tv-details"></div>
 
+<script src="./data/main.js"></script>
+<script src="./functions/opdrachten.js"></script>
+<script src="./functions/opdracht4.js"></script>
 </body>
+
 </html>
